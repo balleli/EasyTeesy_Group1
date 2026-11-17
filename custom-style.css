@@ -1,0 +1,129 @@
+/* =========================================================
+   EasyTeesy Custom Theme (custom-style.css)
+   ========================================================= */
+
+:root {
+  /* Core Palette Tokens */
+  --bs-primary-base: #7F796C;
+  --bs-primary-bg: #7F796C;
+  --bs-primary-contrast: #F9F9F9;
+
+  --bs-accent-base: #7F796C;
+
+  --bs-bg-body: #F9F9F9;
+  --bs-fg-body: #1A1A1A;
+
+  /* Surface & Text Mappings for Bootstrap 6 */
+  --bs-bg-1: #F9F9F9;
+  --bs-bg-2: #F9F9F9;
+  --bs-fg-1: #1A1A1A;
+  --bs-fg-2: #555555;
+  --bs-border-color: #E5E5E5;
+}
+
+/* Base Body & Typography */
+body {
+  background-color: var(--bs-bg-body);
+  color: var(--bs-fg-body);
+}
+
+h1, h2, h3, h4, h5, h6, .card-title {
+  color: var(--bs-fg-body);
+}
+
+.fg-2 {
+  color: var(--bs-fg-2);
+}
+
+/* Navbar & Mobile Drawer */
+.navbar, .drawer, footer {
+  background-color: var(--bs-bg-body);
+  color: var(--bs-fg-body);
+}
+
+.navbar .nav-link, .navbar-brand, .drawer-title {
+  color: var(--bs-fg-body);
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: var(--bs-primary-base);
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--bs-primary-bg);
+  color: var(--bs-primary-contrast);
+}
+
+.hero-section h1, .hero-section p {
+  color: var(--bs-primary-contrast);
+}
+
+.btn-hero-dark {
+  background-color: var(--bs-fg-body);
+  border-color: var(--bs-fg-body);
+  color: var(--bs-bg-body);
+}
+
+.btn-hero-dark:hover {
+  background-color: #333333;
+  border-color: #333333;
+  color: var(--bs-bg-body);
+}
+
+.btn-hero-outline {
+  border-color: var(--bs-primary-contrast);
+  color: var(--bs-primary-contrast);
+  background-color: transparent;
+}
+
+.btn-hero-outline:hover {
+  background-color: var(--bs-primary-contrast);
+  color: var(--bs-fg-body);
+}
+
+/* Standard Theme Buttons */
+.theme-primary, .btn-solid.theme-primary {
+  background-color: var(--bs-primary-bg);
+  border-color: var(--bs-primary-bg);
+  color: var(--bs-primary-contrast);
+}
+
+.theme-primary:hover, .btn-solid.theme-primary:hover {
+  background-color: #6a6459;
+  border-color: #6a6459;
+  color: var(--bs-primary-contrast);
+}
+
+.btn-outline.theme-secondary {
+  border-color: var(--bs-primary-base);
+  color: var(--bs-primary-base);
+}
+
+.btn-outline.theme-secondary:hover {
+  background-color: var(--bs-primary-bg);
+  color: var(--bs-primary-contrast);
+}
+
+/* Product Cards & View Product Buttons */
+.card {
+  background-color: #FFFFFF;
+  border-color: var(--bs-border-color);
+}
+
+.price-tag {
+  color: var(--bs-primary-base);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.btn-product {
+  background-color: var(--bs-bg-body);
+  border: 1px solid var(--bs-fg-body);
+  color: var(--bs-fg-body);
+}
+
+.btn-product:hover {
+  background-color: var(--bs-fg-body);
+  color: var(--bs-bg-body);
+}
