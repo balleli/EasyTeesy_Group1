@@ -127,3 +127,17 @@ h1, h2, h3, h4, h5, h6, .card-title {
   background-color: var(--bs-fg-body);
   color: var(--bs-bg-body);
 }
+
+/* Footer Brand & Links */
+.footer-brand {
+  color: var(--bs-fg-body);
+}
+
+.footer-nav .nav-link {
+  color: var(--bs-fg-body);
+  font-weight: 500;
+}
+
+.footer-nav .nav-link:hover {
+  color: var(--bs-primary-base);
+}
