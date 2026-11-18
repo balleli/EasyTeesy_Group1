@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EasyTeesy</title>
+    <!-- 1. Bootstrap 6 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <script src="./js/mailto.js" defer></script>
+    <style>
+      /* Custom Color Scheme Overrides */
+      body {
+        background-color: #F9F9F9 !important;
+        color: #1A1A1A !important;
+      }
+      .navbar, .drawer, footer, .bg-1, .bg-2 {
+        background-color: #F9F9F9 !important;
+        color: #1A1A1A !important;
+      }
+      .navbar .nav-link, .navbar-brand, .drawer-title {
+        color: #1A1A1A !important;
+      }
+      .navbar .nav-link:hover, .navbar .nav-link.active {
+        color: #7F796C !important;
+      }
+      .fg-2 {
+        color: #555555 !important;
+      }
+      h1, h2, h3, h4, h5, h6, .card-title {
+        color: #1A1A1A !important;
+      }
+
+      /* Hero Section Custom Styling */
+      .hero-section {
+        background-color: #7F796C !important;
+        color: #F9F9F9 !important;
+        text-align: left;
+        padding-left: 24px;
+      }
+      .hero-section h1, .hero-section p {
+        color: #F9F9F9 !important;
+      }
+      .btn-hero-dark {
+        background-color: #1A1A1A !important;
+        border-color: #1A1A1A !important;
+        color: #F9F9F9 !important;
+      }
+      .btn-hero-dark:hover {
+        background-color: #333333 !important;
+        border-color: #333333 !important;
+        color: #F9F9F9 !important;
+      }
+      .btn-hero-outline {
+        border-color: #F9F9F9 !important;
+        color: #F9F9F9 !important;
+        background-color: transparent !important;
+      }
+      .btn-hero-outline:hover {
+        background-color: #F9F9F9 !important;
+        color: #1A1A1A !important;
+      }
+
+      /* Standard Buttons & Cards */
+      .theme-primary, .btn-solid.theme-primary {
+        background-color: #7F796C !important;
+        border-color: #7F796C !important;
+        color: #FFFFFF !important;
+      }
+      .theme-primary:hover, .btn-solid.theme-primary:hover {
+        background-color: #6a6459 !important;
+        border-color: #6a6459 !important;
+      }
+      .btn-outline.theme-secondary {
+        border-color: #7F796C !important;
+        color: #7F796C !important;
+      }
+      .btn-outline.theme-secondary:hover {
+        background-color: #7F796C !important;
+        color: #FFFFFF !important;
+      }
+
+      /* View Product Button Custom Styling */
+      .btn-product {
+        background-color: #F9F9F9 !important;
+        border: 1px solid #1A1A1A !important;
+        color: #1A1A1A !important;
+      }
+      .btn-product:hover {
+        background-color: #1A1A1A !important;
+        color: #F9F9F9 !important;
+      }
+
+      .card {
+        background-color: #FFFFFF;
+        border-color: #E5E5E5;
+      }
+      .price-tag {
+        color: #7F796C !important;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+
+  <!-- Note: v6 spacing runs 0–12 (5 = 1rem, 12 = 3rem).
+        d-flex + flex-column + min-vh-100 lets the footer stick to the bottom on short pages -->
+  <body class="d-flex flex-column min-vh-100">
+
+    <!-- ================= NAVBAR ================= -->
+    <!-- md:navbar-expand = inline links at md and up; a slide-in drawer below that -->
+    <nav class="navbar md:navbar-expand border-bottom">
+      <div class="container">
+        <!-- Logo added on the top left -->
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+          <img src="logo.png" alt="EasyTeesy Logo" height="32" class="d-inline-block align-text-top">
+          <span>EasyTeesy</span>
+        </a>
+
+        <button class="btn-icon navbar-toggler" type="button"
+                data-bs-toggle="drawer" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+
+        <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+          <div class="drawer-header">
+            <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+          </div>
+          <div class="drawer-body">
+            <ul class="nav navbar-nav md:ms-auto">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#features">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </dialog>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero-section py-12 text-center">
+      <div class="privacy-policy">
+        <h1>EasyTeesy Privacy Policy</h1>
+        <p class="text-lg mb-9">
+          <p>Effective Date: October 26, 2026</p>
+          <p>Last Update: November 20, 2026</p>
+          <p>This Privacy Policy is written to comply with the Data Privacy Act of 2012 (Republic Act No. 10173), its Implementing Rules and Regulations, and the issuances of the National Privacy Commission (NPC) of the Philippines.</p>
+        </p>
+      </div>
+    </header>
+
+    <!-- ================= BODY ================= -->
+    <main class="container py-12">
+
+     <div class="policy-rules">
+        <h1>1. Introduction</h1>
+        <p>EasyTeesy (“EasyTeesy,” “we,” “us,” or “our”) is a clothing brand operating the e-commerce website [www.easyteesy.com] (the “Site”). We respect your right to privacy and are committed to protecting your personal data in accordance with Republic Act No. 10173, or the Data Privacy Act of 2012 (the “DPA”), its Implementing Rules and Regulations (“IRR”), and the issuances of the National Privacy Commission (“NPC”) of the Philippines.</p>
+        <p>This Privacy Policy explains what personal data we collect, why we collect it, how we use, share, store, and protect it, and what rights you have over it. By browsing the Site, creating an account, or placing an order, you acknowledge that you have read and understood this Policy. Where the law requires your consent, we will ask for it separately and clearly.</p>
+        <h1>2. Who We Are</h1>
+        <ul>
+            <li>Personal Information Controller: EasyTeesy, [registered business name], [complete business address], Philippines</li>
+            <li>Data Protection Officer (DPO): [Name of DPO]</li>
+            <li>Contact: [privacy@easyteesy.com] · [contact number]</li>
+        </ul>
+        <h1>3. Personal Data We Collect</h1>
+        <p>We collect only the information we need to run our business and serve you. Depending on how you use the Site, this may include:</p>
+        <p>Information you give us directly</p>
+        <ul>
+            <li>Identity and contact details: full name, email address, mobile number, and delivery and billing addresses.</li>
+            <li>Account details: username, password (stored in encrypted form), and order history.</li>
+            <li>Order details: items purchased, sizes, quantities, and delivery instructions.</li>
+            <li>Payment information: payment method and transaction references. Card and e-wallet details are processed by our payment providers, and we do not store full card numbers or security codes.</li>
+            <li>Communications: messages, inquiries, reviews, returns and exchange requests, and survey responses you send us.</li>
+            <li>Marketing preferences: your choice to receive or stop receiving promotional messages.</li>
+        </ul>
+        <p>Information we collect automatically</p>
+        <ul>
+            <li>Device and technical data: IP address, browser type, device type, operating system, language, and time zone.</li>
+            <li>Usage data: pages viewed, products searched or added to your cart, referring pages, and time spent on the Site.</li>
+            <li>Cookies and similar technologies, as described in Section 9.</li>
+        </ul>
+        <p>Information from third parties</p>
+        <ul>
+            <li>Payment providers and couriers confirming payment status and delivery.</li>
+            <li>Social media platforms or sign-in services, if you choose to log in or interact with us through them.</li>
+        </ul>
+        <p>We do not knowingly collect sensitive personal information, as defined under Section 3(l) of the DPA (such as government-issued identification numbers, health, or religious information), unless it is strictly necessary for a transaction, required by law, and you have given your consent.</p>
+        <h1>4. How and Why We Use Your Personal Data</h1>
+        <p>We process your personal data only for specified and legitimate purposes, and only on a lawful basis under Sections 12 and 13 of the DPA.</p>
+        <p>To perform our contract with you</p>
+        <ul>
+            <li>Create and manage your account.</li>
+            <li>Process, confirm, ship, and deliver your orders.</li>
+            <li>Process payments, refunds, returns, and exchanges.</li>
+            <li>Send order updates, receipts, and delivery notifications.</li>
+        </ul>
+        <p>To comply with legal obligations</p>
+        <ul>
+            <li>Keep tax, accounting, and sales records as required by Philippine law.</li>
+            <li>Respond to lawful orders from courts, government agencies, and regulators.</li>
+        </ul>
+        <p>For our legitimate interests</p>
+        <ul>
+            <li>Provide customer support and resolve disputes.</li>
+            <li>Detect, prevent, and investigate fraud, unauthorized transactions, and security incidents.</li>
+            <li>Maintain, analyze, and improve the Site, our products, and our services.</li>
+            <li>Protect our rights, property, and the safety of our customers and staff.</li>
+        </ul>
+        <p>With your consent</p>
+        <ul>
+            <li>Send newsletters, promotions, new-collection announcements, and personalized offers by email, SMS, or other channels.</li>
+            <li>Use non-essential cookies for analytics and advertising.</li>
+        </ul>
+        <p>You may withdraw your consent at any time, as explained in Section 8. We will not use your personal data for a purpose that is incompatible with the purposes described here without informing you and, where required, obtaining your consent.</p>
+        <h1>5. Sharing and Disclosure of Personal Data</h1>
+        <p>We do not sell your personal data. We share it only as needed, and only with parties that are bound to protect it:</p>
+        <ul>
+            <li>Service providers and processors: payment gateways, banks, and e-wallet providers; courier and logistics partners; web hosting and cloud providers; email and SMS platforms; analytics and customer-support tools.</li>
+            <li>Professional advisers: lawyers, accountants, and auditors, under duties of confidentiality.</li>
+            <li>Government and regulatory bodies: when required by law, regulation, or legal process.</li>
+            <li>Business transfers: a successor or buyer, in case of a merger, acquisition, or sale of assets, subject to the same level of protection.</li>
+        </ul>
+        <p>Where we engage a third party to process personal data on our behalf, we enter into a data sharing or outsourcing agreement that requires them to use the data only on our instructions, to keep it confidential, and to apply security measures consistent with the DPA.</p>
+        <h1>6. Transfers Outside the Philippines</h1>
+        <p>Some of our service providers, such as cloud hosting or email platforms, may store or process data outside the Philippines. When this happens, we remain responsible for your personal data and take reasonable steps, including contractual safeguards, to ensure it receives a level of protection comparable to that required by Philippine law.</p>
+        <h1>7. Retention and Disposal</h1>
+        <p>We keep personal data only for as long as necessary to fulfill the purposes for which it was collected, or as required by law.</p>
+        <ul>
+            <li>Account information: for as long as your account is active, and for a reasonable period after closure.</li>
+            <li>Order and transaction records: for the period required by Philippine tax, accounting, and commercial laws.</li>
+            <li>Marketing data: until you withdraw consent or unsubscribe.</li>
+            <li>Customer support records: for a reasonable period needed to resolve disputes and improve service.</li>
+        </ul>
+        <p>When personal data is no longer needed, we securely delete, destroy, or anonymize it so that it can no longer be used to identify you.</p>
+        <h1>8. Your Rights as a Data Subject</h1>
+        <p>Under Section 16 of the DPA, you have the following rights:</p>
+        <ol>
+            <li>Right to be informed whether and how your personal data is being processed.</li>
+            <li>Right to object to the processing of your personal data, including processing for direct marketing, automated processing, or profiling, and to withdraw your consent.</li>
+            <li>Right to access your personal data, including the contents, sources, recipients, and purposes of processing.</li>
+            <li>Right to rectification of inaccurate or incomplete personal data.</li>
+            <li>Right to erasure or blocking of your personal data from our filing system when it is incomplete, outdated, false, unlawfully obtained, used for an unauthorized purpose, or no longer necessary.</li>
+            <li>Right to data portability — to obtain a copy of your personal data in an electronic or structured format that is commonly used, where processing is done by electronic means.</li>
+            <li>Right to damages for any inaccurate, incomplete, outdated, false, unlawfully obtained, or unauthorized use of your personal data.</li>
+            <li>Right to file a complaint with the National Privacy Commission.</li>
+        </ol>
+        <p>To exercise any of these rights, email our DPO at [privacy@easyteesy.com] with your full name, the email address linked to your account, and a description of your request. We may ask for proof of identity to protect your data from unauthorized requests. We aim to respond within [fifteen (15)] days. Some rights are subject to limitations allowed by law, for example where we must retain records to comply with legal obligations.</p>
+        <p>You may unsubscribe from marketing messages at any time by clicking the “unsubscribe” link in our emails, replying “STOP” to our SMS messages, or contacting us directly.</p>
+        <h1>9. Cookies and Similar Technologies</h1>
+        <p>The Site uses cookies and similar technologies to keep it working and to understand how it is used.</p>
+        <ul>
+            <li>Essential cookies: needed for core features such as your shopping cart, login, and checkout security. These cannot be turned off.</li>
+            <li>Analytics cookies: help us understand how visitors use the Site so we can improve it.</li>
+            <li>Advertising and social media cookies: used to show relevant offers and measure campaign performance.</li>
+        </ul>
+        <p>We ask for your consent before using non-essential cookies. You can change your choices at any time through our cookie settings or your browser settings. Disabling some cookies may affect how the Site works.</p>
+        <h1>10. Security of Your Personal Data</h1>
+        <p>We implement reasonable and appropriate organizational, physical, and technical security measures to protect your personal data against accidental or unlawful destruction, loss, alteration, disclosure, and unauthorized access, as required by Section 20 of the DPA.</p>
+        <ul>
+            <li>Organizational: a designated Data Protection Officer, confidentiality undertakings for staff, role-based access limited to those who need the data, and regular privacy training.</li>
+            <li>Physical: restricted access to offices, devices, and storage where personal data is kept.</li>
+            <li>Technical: encrypted connections (HTTPS/TLS), encrypted password storage, firewalls, access controls, regular security reviews, and secure data backups.</li>
+        </ul>
+        <p>No method of transmission or storage is completely secure, so we cannot guarantee absolute security. Please protect your account by using a strong, unique password and keeping it confidential.</p>
+        <h1>11. Data Breach Notification</h1>
+        <p>If a personal data breach occurs that involves sensitive personal information or information that may enable identity fraud, and is likely to give rise to a real risk of serious harm to you, we will notify the National Privacy Commission and affected data subjects within seventy-two (72) hours of discovering the breach or reasonable belief that one has occurred, as required by NPC rules. We keep records of security incidents and the steps we take to address them.</p>
+        <h1>12. Children’s Privacy</h1>
+        <p>The Site is intended for adults and is not directed at children. If you are below eighteen (18) years old, please use the Site only with the involvement and consent of a parent or legal guardian. We do not knowingly collect personal data from minors without parental or guardian consent. If you believe a minor has given us personal data without such consent, please contact our DPO so we can delete it.</p>
+        <h1>13. Third-Party Links</h1>
+        <p>The Site may contain links to third-party websites, such as social media pages, payment portals, or courier tracking pages. We are not responsible for their privacy practices. We encourage you to read their privacy policies before giving them any personal data.</p>
+        <h1>14. Changes to This Privacy Policy</h1>
+        <p>We may update this Policy from time to time to reflect changes in our practices, technology, or the law. We will post the updated version on the Site with a new “Last updated” date, and where the changes are significant, we will notify you by email or a prominent notice on the Site. Your continued use of the Site after the update means you acknowledge the revised Policy, and where required by law, we will ask for your consent again.</p>
+        <h1>15. Contact Us and Complaints</h1>
+        <p>For questions, concerns, or requests about this Privacy Policy or your personal data, please contact our Data Protection Officer:</p>
+        <p>Data Protection Officer EasyTeesy [Complete business address], Philippines Email: [privacy@easyteesy.com] Phone: [contact number]</p>
+        <p>If you believe your data privacy rights have been violated and we have not resolved your concern, you may file a complaint with the National Privacy Commission:</p>
+        <p>National Privacy Commission PICC Complex, Roxas Boulevard, Pasay City 1307, Philippines Website: www.privacy.gov.ph</p>
+     </div>
+
+
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- mt-auto pushes the footer to the bottom of the page -->
+    <footer class="border-top py-7 mt-auto" id="contact">
+      <div class="container d-flex flex-column md:flex-row md:justify-content-between gap-2 text-center">
+        <span class="fg-2">&copy; 2026 EasyTeesy</span>
+        <span class="fg-2">hello@easyteesy.example</span>
+      </div>
+    </footer>
+
+    <!-- 2. Bootstrap 6 JS (needed for the navbar drawer) -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
