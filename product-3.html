@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EasyTeesy</title>
+    <!-- 1. Bootstrap 6 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <!-- 2. Custom EasyTeesy Stylesheet -->
+    <link href="custom-style.css" rel="stylesheet">
+    <script src="./js/mailto.js" defer></script>
+  </head>
+<body>
+< <!-- ================= NAVBAR ================= -->
+    <!-- md:navbar-expand = inline links at md and up; a slide-in drawer below that -->
+    <nav class="navbar md:navbar-expand border-bottom">
+      <div class="container">
+        <!-- Logo added on the top left -->
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+          <img src="assets/logo.png" alt="EasyTeesy Logo" height="32" class="d-inline-block align-text-top">
+          <span>EasyTeesy</span>
+        </a>
+
+        <button class="btn-icon navbar-toggler" type="button"
+                data-bs-toggle="drawer" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+
+        <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+          <div class="drawer-header">
+            <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+          </div>
+          <div class="drawer-body">
+            <ul class="nav navbar-nav md:ms-auto">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#features">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </dialog>
+      </div>
+    </nav>
+	
+	
+<main class="product-page">
+
+    <!-- Product Images -->
+    <section class="product-gallery">
+
+        <div class="main-image">
+            <img src="assets/shirt-1.png" alt="Do Good Work Tee">
+        </div>
+
+        <div class="thumbnail-gallery">
+            <div class="thumbnail">
+                <img src="assets/shirt-3 preview 1.png" alt="Close-Up View">
+            </div>
+
+            <div class="thumbnail">
+                <img src="assets/shirt-3 preview 2.png" alt="Back View">
+            </div>
+
+            <div class="thumbnail">
+                <img src="assets/shirt-3 preview 3.png" alt="With other shirt designs">
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Product Information -->
+    <section class="product-details">
+
+        <h1 style="font-size: 33.6px;">Do Good Work Tee</h1>
+        <h1 style="font-size: 25.2;">₱499</h1>
+
+        <h3 style="font-size: 16.8px;">Product Description</h3>
+
+        <p style="font-size: 16.8px;">
+            We always work hard for something that we want to achieve.
+            The <strong>Do Good Work Tee</strong> reminds us to always
+            strive for always in the things that we do, with our
+            comfortable fabric to keep you on style while doing the
+            hard work.
+        </p>
+
+        <hr>
+
+        <!-- Size Selection -->
+        <div class="size-selection">
+            <h3 style="font-size: 16.8px;">Size</h3>
+
+            <div class="size-options">
+                <button>XS</button>
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+            </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="quantity-selection">
+            <h3>Quantity</h3>
+
+            <div class="quantity-controls">
+                <button onclick="changeQuantity(-1)">-</button>
+                <span id="quantity">1</span>
+                <button onclick="changeQuantity(1)">+</button>
+            </div>
+        </div>
+
+        <!-- Order Button -->
+        <button class="order-button" onclick="orderProduct()">
+            Order Now
+        </button>
+
+        <p class="order-note">
+            By clicking "Order Now," you'll be redirected to your
+            email app to complete your order.
+        </p>
+
+    </section>
+
+</main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-top py-9 mt-auto text-center" id="contact">
+      <div class="container d-flex flex-column align-items-center">
+        
+        <!-- Centered Brand Logo & Name -->
+        <a class="d-inline-flex align-items-center gap-2 text-decoration-none fw-bold fs-5 mb-2 footer-brand" href="index.html">
+          <img src="assets/logo.png" alt="EasyTeesy Logo" height="32" class="d-inline-block">
+          <span>EasyTeesy</span>
+        </a>
+
+        <!-- Subtitle -->
+        <p class="fg-2 mb-5">Wear with ease, live in ease.</p>
+
+        <!-- Navigation Links (Contact Us | Privacy | Terms) -->
+        <ul class="nav justify-content-center align-items-center gap-2 mb-5 footer-nav">
+          <li class="nav-item">
+            <a class="nav-link px-2" href="contact.html">Contact Us</a>
+          </li>
+          <li class="fg-2" aria-hidden="true">|</li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="privacy.html">Privacy Policy</a>
+          </li>
+        </ul>
+
+        <!-- Copyright -->
+        <p class="fg-2 small mb-0">&copy; 2026 Easy Teesy. All Rights Reserved.</p>
+
+      </div>
+    </footer>
+
+    <!-- 3. Bootstrap 6 JS (needed for the navbar drawer) -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
+
