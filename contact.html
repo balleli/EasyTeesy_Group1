@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="custom-style.css">
     <script src="./js/mailto.js" defer></script>
 </head>
-    
+
     <!-- ================= NAVBAR ================= -->
-    <!-- md:navbar-expand = inline links at md and up; a slide-in drawer below that -->
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar md:navbar-expand border-bottom">
       <div class="container">
+
         <!-- Logo added on the top left -->
         <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
           <img src="assets/logo.png" alt="EasyTeesy Logo" height="32" class="d-inline-block align-text-top">
@@ -32,15 +33,19 @@
           </div>
           <div class="drawer-body">
             <ul class="nav navbar-nav md:ms-auto">
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#features">Shop</a></li>
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
             </ul>
           </div>
         </dialog>
+        <!--FOR THE SEARCH ICON-->
+        <span class="search-icon" aria-hidden="true">⌕</span>
       </div>
     </nav>
+
+
   <!-- ================= PAGE HEADING=========== -->
 <main>
 
@@ -62,16 +67,16 @@
                 <h2>Contact Information</h2>
 
                 <div class="contact-details">
-                    <img src="assets/email icon.png" alt"" class="contact-icon">
+                    <img src="email icon.png" alt"" class="contact-icon">
                     <a href="mailto:hello@examplewebsite142.com">hello@examplewebsite142.com</a>
                 </div>
 
-                <div class="assets/contact-details">
+                <div class="contact-details">
                     <img src="phone icon.png" alt"" class="contact-icon">
                     <a href="tel:+639123123123">+63 912 312 3123</a>
                 </div>
 
-                <div class="assets/contact-details">
+                <div class="contact-details">
                     <img src="clock icon.png" alt="" class="contact-icon">
                     <div>
                     <p>Working Hours:</p>
