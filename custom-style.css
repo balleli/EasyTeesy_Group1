@@ -327,6 +327,140 @@ main.product-page > .product-details {
     text-align: left;
 }
 
+/* =========================================================
+   Contact Us Page
+   ========================================================= */
+.contact-heading h1 { 
+  background-color: var(--bs-primary-bg);
+  color: var(--bs-primary-contrast);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+/* Contact Page Layout */
+.page-layout {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/*Contact Information*/
+.contact-format h2, .contact-information h2 {
+  color: var(--bs-fg-1);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.contact-format p {
+  color: var(--bs-fg-body);
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  display: flex; 
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 0.0625rem solid var(--bs-border-color-2);
+}
+
+.contact-details div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details div p {
+  margin: 0;
+}
+
+.contact-details a {
+  text-decoration: none;
+}
+
+.contact-icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Inquiry Form */
+.inquiry-form {
+  border: 0.0625rem solid var(--bs-border-color-2);
+  background-color: var(--bs-bg-1);
+  padding: 1.5rem 1.5rem;
+}
+
+
+.inquiry-form h2 {
+  color: var(--bs-fg-1);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.form-group { 
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--bs-fg-body);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: var(--bs-fg-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-left: 0.3125rem;
+}
+
+.hint {
+  font-size: 0.78rem;
+  color: var(--bs-fg-body);
+  margin:0 0 0.5rem;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.625rem 0.75rem;
+  border: 0.0625rem solid var(--bs-border-color-2)!important;
+  background-color: var(--bs-bg-1)!important;
+  color: var(--bs-fg-body)
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: 0.0625rem solid var(--bs-border-color-2);
+  offset: 0.0625rem;
+}
+
+.inquiry-form textarea {
+  resize: vertical;
+}
+
+.submit-message {
+  width: 100%;
+  margin-top: 0.20 rem;
+  padding: 0.625rem 0.75rem;
+  background-color: var(--bs-fg-1);
+  color: var(--bs-bg-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Mobile layout */
 @media (max-width: 700px) {
     main.product-page {
