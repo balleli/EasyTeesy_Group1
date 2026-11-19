@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EasyTeesy</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom-style.css">
+    <script src="./js/mailto.js" defer></script>
+</head>
+
+    <!-- ================= NAVBAR ================= -->
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar md:navbar-expand border-bottom">
+      <div class="container">
+
+        <!-- Logo added on the top left -->
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+          <img src="logo.png" alt="EasyTeesy Logo" height="32" class="d-inline-block align-text-top">
+          <span>EasyTeesy</span>
+        </a>
+
+        <button class="btn-icon navbar-toggler" type="button"
+                data-bs-toggle="drawer" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+
+        <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+          <div class="drawer-header">
+            <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+          </div>
+          <div class="drawer-body">
+            <ul class="nav navbar-nav md:ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#features">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link-active" aria-current="page" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </dialog>
+        <!--FOR THE SEARCH ICON-->
+        <span class="search-icon" aria-hidden="true">⌕</span>
+      </div>
+    </nav>
+
+
+  <!-- ================= PAGE HEADING=========== -->
+<main>
+
+    <header class="contact-heading">
+        <div class="container">
+            <h1>Contact Us</h1>
+        </div>
+    </header>
+
+ <!-- ================= BODY: LEFT PART ================ -->
+
+    <div class="page-layout">
+
+        <section class="contact-format">
+            <h2>Feel free to reach out to us!</h2>
+            <p class="fg-2"> We always want the best for our customers! Have questions or inquiries about our products? Fill out the form with your details and concerns, and we’ll do our best to immediately assist and accommodate your needs.</p>
+
+            <div class="contact-information">
+                <h2>Contact Information</h2>
+
+                <div class="contact-details">
+                    <img src="email icon.png" alt"" class="contact-icon">
+                    <a href="mailto:hello@examplewebsite142.com">hello@examplewebsite142.com</a>
+                </div>
+
+                <div class="contact-details">
+                    <img src="phone icon.png" alt"" class="contact-icon">
+                    <a href="tel:+639123123123">+63 912 312 3123</a>
+                </div>
+
+                <div class="contact-details">
+                    <img src="clock icon.png" alt="" class="contact-icon">
+                    <div>
+                    <p>Working Hours:</p>
+                    <p>Monday - Friday | 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+         </div>  
+        </section>
+
+<!-- ================= BODY: RIGHT PART ================ -->
+<section class="inquiry-area">
+    <form id="inquiryForm" class="inquiry-form" action="#" method="post">
+
+        <h2>Inquiry Form</h2>
+
+        <div class="form-group">
+            <label for="full-name">Full Name:<span class="required">(required)</span></label>
+            <input type="text" id="full-name" name="full-name" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:<span class="required">(required)</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Subject:<span class="required">(required)</span></label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Your Message:<span class="required">(required)</span></label>
+            <p id="message-hint" class="hint">Kindly refrain from messaging password or payment details.</p>
+            <textarea id="message" name="message" rows="8" required aria-describedby="message-hint"></textarea>
+        </div>
+
+        <button type="submit" class="btn-solid.theme-primary submit-message">Submit Message</button>
+    </form>
+</section>
+</div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+    <footer class="border-top py-9 mt-auto text-center" id="contact">
+      <div class="container d-flex flex-column align-items-center">
+        
+        <!-- Centered Brand Logo & Name -->
+        <a class="d-inline-flex align-items-center gap-2 text-decoration-none fw-bold fs-5 mb-2 footer-brand" href="index.html">
+          <img src="logo.png" alt="EasyTeesy Logo" height="32" class="d-inline-block">
+          <span>EasyTeesy</span>
+        </a>
+
+        <!-- Subtitle -->
+        <p class="fg-2 mb-5">Wear with ease, live in ease.</p>
+
+        <!-- Navigation Links (Contact Us | Privacy | Terms) -->
+        <ul class="nav justify-content-center align-items-center gap-2 mb-5 footer-nav">
+          <li class="nav-item">
+            <a class="nav-link px-2" href="contact.html">Contact Us</a>
+          </li>
+          <li class="fg-2" aria-hidden="true">|</li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="privacy.html">Privacy</a>
+          </li>
+          <li class="fg-2" aria-hidden="true">|</li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="terms.html">Terms</a>
+          </li>
+        </ul>
+
+        <!-- Copyright -->
+        <p class="fg-2 small mb-0">&copy; 2026 Easy Teesy. All Rights Reserved.</p>
+
+      </div>
+    </footer>
+
+    <!-- 3. Bootstrap 6 JS (needed for the navbar drawer) -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
