@@ -283,14 +283,40 @@
 
     </main>
 
-    <!-- ================= FOOTER ================= -->
-    <!-- mt-auto pushes the footer to the bottom of the page -->
-    <footer class="border-top py-7 mt-auto" id="contact">
-      <div class="container d-flex flex-column md:flex-row md:justify-content-between gap-2 text-center">
-        <span class="fg-2">&copy; 2026 EasyTeesy</span>
-        <span class="fg-2">hello@easyteesy.example</span>
+ <!-- ================= FOOTER ================= -->
+    <footer class="border-top py-9 mt-auto text-center" id="contact">
+      <div class="container d-flex flex-column align-items-center">
+        
+        <!-- Centered Brand Logo & Name -->
+        <a class="d-inline-flex align-items-center gap-2 text-decoration-none fw-bold fs-5 mb-2 footer-brand" href="index.html">
+          <img src="logo.png" alt="EasyTeesy Logo" height="32" class="d-inline-block">
+          <span>EasyTeesy</span>
+        </a>
+
+        <!-- Subtitle -->
+        <p class="fg-2 mb-5">Wear with ease, live in ease.</p>
+
+        <!-- Navigation Links (Contact Us | Privacy | Terms) -->
+        <ul class="nav justify-content-center align-items-center gap-2 mb-5 footer-nav">
+          <li class="nav-item">
+            <a class="nav-link px-2" href="contact.html">Contact Us</a>
+          </li>
+          <li class="fg-2" aria-hidden="true">|</li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="privacy.html">Privacy</a>
+          </li>
+          <li class="fg-2" aria-hidden="true">|</li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="terms.html">Terms</a>
+          </li>
+        </ul>
+
+        <!-- Copyright -->
+        <p class="fg-2 small mb-0">&copy; 2026 Easy Teesy. All Rights Reserved.</p>
+
       </div>
     </footer>
+
 
     <!-- 2. Bootstrap 6 JS (needed for the navbar drawer) -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
