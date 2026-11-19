@@ -169,24 +169,26 @@ h1, h2, h3, h4, h5, h6, .card-title {
 }
 
 /* Solo Product Pages */
-.product-page {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-    gap: 42px;
+main.product-page {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) !important;
+    column-gap: 42px;
+    row-gap: 25px;
     width: 92%;
     max-width: 1200px;
     margin: 30px auto;
     align-items: start;
-    flex: 1;
 }
 
-.product-gallery,
-.product-details {
-    min-width: 0;
+main.product-page > .product-gallery,
+main.product-page > .product-details {
+    display: block;
     width: 100%;
+    min-width: 0;
+    margin: 0;
 }
 
-.main-image {
+.product-page .main-image {
     width: 100%;
     height: 400px;
     background: #eeeeee;
@@ -196,7 +198,7 @@ h1, h2, h3, h4, h5, h6, .card-title {
     overflow: hidden;
 }
 
-.main-image img {
+.product-page .main-image img {
     display: block;
     width: 100%;
     height: 100%;
@@ -204,21 +206,21 @@ h1, h2, h3, h4, h5, h6, .card-title {
     object-fit: contain;
 }
 
-.thumbnail-gallery {
+.product-page .thumbnail-gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     margin-top: 18px;
 }
 
-.thumbnail {
+.product-page .thumbnail {
     height: 130px;
     min-width: 0;
     background: #dddddd;
     overflow: hidden;
 }
 
-.thumbnail img {
+.product-page .thumbnail img {
     display: block;
     width: 100%;
     height: 100%;
@@ -226,44 +228,44 @@ h1, h2, h3, h4, h5, h6, .card-title {
     object-fit: cover;
 }
 
-.product-details h1 {
+.product-page .product-details h1 {
     font-size: 23px;
     line-height: 1.25;
     margin: 0 0 8px;
 }
 
-.product-details h2 {
+.product-page .product-details h2 {
     font-size: 17px;
     line-height: 1.3;
     margin: 0 0 18px;
 }
 
-.product-details h3 {
+.product-page .product-details h3 {
     font-size: 11px;
     line-height: 1.4;
     margin: 12px 0 8px;
 }
 
-.product-details p {
+.product-page .product-details p {
     font-size: 11px;
     line-height: 1.5;
     margin: 0;
     text-align: justify;
 }
 
-.product-details hr {
+.product-page .product-details hr {
     border: 0;
     border-top: 1px solid #999999;
     margin: 12px 0;
 }
 
-.size-options {
+.product-page .size-options {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.size-options button {
+.product-page .size-options button {
     min-width: 40px;
     padding: 4px 10px;
     background: #dddddd;
@@ -272,23 +274,23 @@ h1, h2, h3, h4, h5, h6, .card-title {
     cursor: pointer;
 }
 
-.size-options button:hover,
-.size-options button:focus {
+.product-page .size-options button:hover,
+.product-page .size-options button:focus {
     background: #1a1a1a;
     color: #ffffff;
 }
 
-.quantity-selection {
+.product-page .quantity-selection {
     margin-top: 12px;
 }
 
-.quantity-controls {
+.product-page .quantity-controls {
     display: flex;
     align-items: center;
 }
 
-.quantity-controls button,
-.quantity-controls span {
+.product-page .quantity-controls button,
+.product-page .quantity-controls span {
     min-width: 24px;
     padding: 3px 7px;
     background: #dddddd;
@@ -298,11 +300,11 @@ h1, h2, h3, h4, h5, h6, .card-title {
     text-align: center;
 }
 
-.quantity-controls button {
+.product-page .quantity-controls button {
     cursor: pointer;
 }
 
-.order-button {
+.product-page .order-button {
     display: block;
     width: 100%;
     margin-top: 16px;
@@ -314,31 +316,30 @@ h1, h2, h3, h4, h5, h6, .card-title {
     cursor: pointer;
 }
 
-.order-button:hover {
+.product-page .order-button:hover {
     background: #444444;
 }
 
-.product-details p.order-note {
+.product-page .product-details p.order-note {
     margin-top: 8px;
     font-size: 10px;
     font-style: italic;
     text-align: left;
 }
 
-/* Responsive: stack the image and details on narrow screens. */
+/* Mobile layout */
 @media (max-width: 700px) {
-    .product-container {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 25px;
+    main.product-page {
+        grid-template-columns: minmax(0, 1fr) !important;
         width: 92%;
+        gap: 25px;
     }
 
-    .main-image {
+    .product-page .main-image {
         height: 320px;
     }
 
-    .thumbnail {
+    .product-page .thumbnail {
         height: 100px;
     }
 }
-
