@@ -7,11 +7,11 @@
 
 :root {
   /* Core Palette Tokens */
-  --bs-primary-base: #7F796C;
-  --bs-primary-bg: #7F796C;
+  --bs-primary-base: #35322D;
+  --bs-primary-bg: #35322D;
   --bs-primary-contrast: #F9F9F9;
 
-  --bs-accent-base: #7F796C;
+  --bs-accent-base: #35322D;
 
   --bs-bg-body: #F9F9F9;
   --bs-fg-body: #1A1A1A;
@@ -75,16 +75,16 @@ h1, h2, h3, h4, h5, h6, .card-title {
   padding-left: 24px;
 }
 
-.btn-hero-dark {
-  background-color: var(--bs-fg-body);
-  border-color: var(--bs-fg-body);
-  color: var(--bs-bg-body);
+.btn-hero-light {
+  background-color: var(--bs-primary-contrast);
+  border-color: var(--bs-primary-contrast);
+  color: var(--bs-fg-body);
 }
 
-.btn-hero-dark:hover {
-  background-color: #333333;
-  border-color: #333333;
-  color: var(--bs-bg-body);
+.btn-hero-light:hover {
+  background-color: #E5E2DC;
+  border-color: #E5E2DC;
+  color: var(--bs-fg-body);
 }
 
 .btn-hero-outline {
