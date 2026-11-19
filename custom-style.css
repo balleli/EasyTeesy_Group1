@@ -21,7 +21,8 @@
   --bs-bg-2: #F9F9F9;
   --bs-fg-1: #1A1A1A;
   --bs-fg-2: #555555;
-  --bs-border-color: #E5E5E5;
+  --bs-border-color-1: #E5E5E5;
+  --bs-border-color-2: #1A1A1A;
 
   /* Typography Variables */
   --bs-body-font-family: 'DM Sans', sans-serif;
