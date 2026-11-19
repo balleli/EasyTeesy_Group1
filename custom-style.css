@@ -2,6 +2,9 @@
    EasyTeesy Custom Theme (custom-style.css)
    ========================================================= */
 
+/* Import DM Sans from Google Fonts (Weights: Medium 500, Black 900) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,900;1,9..40,500;1,9..40,900&display=swap');
+
 :root {
   /* Core Palette Tokens */
   --bs-primary-base: #7F796C;
@@ -19,16 +22,24 @@
   --bs-fg-1: #1A1A1A;
   --bs-fg-2: #555555;
   --bs-border-color: #E5E5E5;
+
+  /* Typography Variables */
+  --bs-body-font-family: 'DM Sans', sans-serif;
+  --bs-heading-font-family: 'DM Sans', sans-serif;
 }
 
 /* Base Body & Typography */
 body {
   background-color: var(--bs-bg-body);
   color: var(--bs-fg-body);
+  font-family: var(--bs-body-font-family);
+  font-weight: 500; /* DM Sans Medium */
 }
 
 h1, h2, h3, h4, h5, h6, .card-title {
   color: var(--bs-fg-body);
+  font-family: var(--bs-heading-font-family);
+  font-weight: 900; /* DM Sans Black */
 }
 
 .fg-2 {
