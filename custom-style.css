@@ -59,6 +59,11 @@ h1, h2, h3, h4, h5, h6, .card-title {
   color: var(--bs-primary-contrast);
 }
 
+.privacy-hero {
+  text-align: left;
+  padding-left: 24px;
+}
+
 .btn-hero-dark {
   background-color: var(--bs-fg-body);
   border-color: var(--bs-fg-body);
@@ -129,8 +134,16 @@ h1, h2, h3, h4, h5, h6, .card-title {
 }
 
 /* Footer Brand & Links */
-.footer-brand {
+.footer-brand,
+.footer-brand:hover,
+.footer-brand:focus {
   color: var(--bs-fg-body);
+  text-decoration: none;
+}
+
+.footer-nav {
+  --bs-nav-link-color: var(--bs-fg-body);
+  --bs-nav-link-hover-color: var(--bs-primary-base);
 }
 
 .footer-nav .nav-link {
@@ -138,6 +151,8 @@ h1, h2, h3, h4, h5, h6, .card-title {
   font-weight: 500;
 }
 
-.footer-nav .nav-link:hover {
+.footer-nav .nav-link:hover,
+.footer-nav .nav-link:focus,
+.footer-nav .nav-link.active {
   color: var(--bs-primary-base);
 }
