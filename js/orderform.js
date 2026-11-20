@@ -1,30 +1,39 @@
 const TO_ADDRESS = "orders@examplewebsite142.com";
+let chosenSize = "", quantity = 1;
 
-const form = document.querySelector("#order-form");
+const sizeSelection = document.querySelector(".size-options");
+sizeSelection.addEventListener("click", function(event) {
+    chosenSize = event.target.textContent;
+    alert("Your chosen size: " + chosenSize);
+});
 
-function buildMailto() {
-  const customerName = document.querySelector("#customer-name").value;
-  const productName = document.querySelector("#product-name").value;
-  const quantity = document.querySelector("#quantity").value;
-  const email = document.querySelector("#email").value;
-  const address = document.querySelector("#address").value;
+document.querySelector("#quantity").textContent = quantity;
+function changeQuantity(change) {
+    quantity = quantity + change;
+    if (quantity < 1) {
+        quantity = 1;
+    }
 
-  const subject = "New Order: " + productName + " (" + quantity + "x)";
-  const body = 
-    "Customer Name: " + customerName + "\r\n" +
-    "Product: " + productName + "\r\n" +
-    "Quantity: " + quantity + "\r\n" +
-    "Email: " + email + "\r\n" +
-    "Delivery Address: " + address;
-
-  return (
-    "mailto:" + TO_ADDRESS +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body)
-  );
+    document.querySelector("#quantity").textContent = quantity;
 }
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  window.location.href = buildMailto();
-});
+function orderProduct() {
+
+    const shirtName = document.querySelector(".product-details h1").textContent;
+    const shirtPrice = document.querySelector(".product-details h1 + h1").textContent;
+
+    const subject = "Order Summary";
+    const body =
+        "Product: " + shirtName + "\r\n" +
+        "Price: " + shirtPrice + "\r\n" +
+        "Size: " + chosenSize + "\r\n" +
+        "Quantity: " + quantity;
+
+    const mailto =
+        "mailto:" + TO_ADDRESS +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+    window.location.href = mailto;
+}
+
