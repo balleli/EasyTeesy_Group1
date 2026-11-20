@@ -12,13 +12,18 @@ function buildMailto() {
   const body =
     "Name: " + name + "\r\n" +
     "Email: " + email + "\r\n\r\n" +
+    "Topic: " + topic + "\r\n\r\n" +
     text;
 
-  return (
+  const mailto = 
     "mailto:" + TO_ADDRESS +
     "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body)
-  );
+    "&body=" + encodeURIComponent(body);
+
+  console.log(mailto);
+  alert(body);
+
+  return mailto;
 }
 
 form.addEventListener("submit", function (event) {
