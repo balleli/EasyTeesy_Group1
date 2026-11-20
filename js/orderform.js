@@ -34,7 +34,7 @@ function orderProduct() {
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 
-    window.location.href = mailto;
+    window.open(mailto"_self");
 }
 
 window.changeQuantity = changeQuantity;
