@@ -21,7 +21,7 @@ function buildMailto() {
     "&body=" + encodeURIComponent(body);
 
   console.log(mailto);
-  alert(body);
+  alert("Message sent! Thank you for reaching out to us. We will get back to you as soon as possible.");
 
   return mailto;
 }
