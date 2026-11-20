@@ -45,14 +45,16 @@ function orderProduct() {
         "Size: " + chosenSize + "\r\n" +
         "Quantity: " + quantity;
 
-    const mailto =
-        "mailto:" + TO_ADDRESS +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+   const mailto =
+    "mailto:" + TO_ADDRESS +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
 
-    window.open(mailto, "_blank");
+    console.log(mailto);
+    alert(body);
+
+    window.location.href = mailto;
 }
 
-// Make functions accessible to HTML buttons
 window.changeQuantity = changeQuantity;
 window.orderProduct = orderProduct;
