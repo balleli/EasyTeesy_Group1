@@ -2,8 +2,9 @@ const TO_ADDRESS = "orders@examplewebsite142.com";
 let chosenSize = "", quantity = 1;
 
 const sizeSelection = document.querySelector(".size-options");
-sizeSelection.addEventListener("click", function(event) {
-    chosenSize = event.target.textContent;
+    if (event.target.tagName === "BUTTON") {
+    sizeSelection.addEventListener("click", function(event) {
+    chosenSize = event.target.textContent,trim();
     alert("Your chosen size: " + chosenSize);
 });
 
@@ -34,7 +35,7 @@ function orderProduct() {
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 
-    window.open(mailto"_self");
+    window.location.href = mailto;
 }
 
 window.changeQuantity = changeQuantity;
