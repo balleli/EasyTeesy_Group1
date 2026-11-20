@@ -37,3 +37,6 @@ function orderProduct() {
     window.location.href = mailto;
 }
 
+window.changeQuantity = changeQuantity;
+window.orderProduct = orderProduct;
+
