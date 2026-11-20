@@ -1,16 +1,21 @@
 const TO_ADDRESS = "orders@examplewebsite142.com";
+
 let chosenSize = "", quantity = 1;
 
 const sizeSelection = document.querySelector(".size-options");
+
+sizeSelection.addEventListener("click", function(event) {
     if (event.target.tagName === "BUTTON") {
-    sizeSelection.addEventListener("click", function(event) {
-    chosenSize = event.target.textContent,trim();
-    alert("Your chosen size: " + chosenSize);
+        chosenSize = event.target.textContent.trim();
+        alert("Your chosen size: " + chosenSize);
+    }
 });
 
 document.querySelector("#quantity").textContent = quantity;
+
 function changeQuantity(change) {
     quantity = quantity + change;
+
     if (quantity < 1) {
         quantity = 1;
     }
@@ -20,10 +25,16 @@ function changeQuantity(change) {
 
 function orderProduct() {
 
-    const shirtName = document.querySelector(".product-details h1").textContent;
-    const shirtPrice = document.querySelector(".product-details h1 + h1").textContent;
+    if (chosenSize === "") {
+        alert("Please select a shirt size first!");
+        return;
+    }
+
+    const shirtName = document.querySelector(".product-details h1").textContent.trim();
+    const shirtPrice = document.querySelector(".product-details h1 + h1").textContent.trim();
 
     const subject = "Order Summary";
+
     const body =
         "Product: " + shirtName + "\r\n" +
         "Price: " + shirtPrice + "\r\n" +
@@ -38,6 +49,6 @@ function orderProduct() {
     window.location.href = mailto;
 }
 
+// Make functions accessible to HTML buttons
 window.changeQuantity = changeQuantity;
 window.orderProduct = orderProduct;
-
