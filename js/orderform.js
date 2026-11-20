@@ -6,10 +6,14 @@ const sizeSelection = document.querySelector(".size-options");
 
 sizeSelection.addEventListener("click", function(event) {
     if (event.target.tagName === "BUTTON") {
+        
         chosenSize = event.target.textContent.trim();
-        alert("Your chosen size: " + chosenSize);
+        document.querySelectorAll(".size-options button").forEach(function(button) {
+            button.classList.remove("selected")
+        });
+        event.target.classList.add("selected");
     }
-});
+ });
 
 document.querySelector("#quantity").textContent = quantity;
 
@@ -46,7 +50,7 @@ function orderProduct() {
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 
-    window.location.href = mailto;
+    window.open(mailto, "_blank");
 }
 
 // Make functions accessible to HTML buttons
